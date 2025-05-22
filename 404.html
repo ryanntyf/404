@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabalho sobre Inteligência Artificial</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="shortcut icon" href="Artua-Wall-E-Eve.ico" type="image/x-icon">
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
+            --primary-color: #012745;
+            --secondary-color: #08416E;
             --accent-color: #e74c3c;
             --text-color: #333;
             --light-bg: #f9f9f9;
@@ -27,7 +29,7 @@
         }
         
         header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background-image: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: var(--white);
             padding: 3rem 0;
             text-align: center;
@@ -378,6 +380,7 @@
             <li><a href="#mercado">Mercado de Trabalho</a></li>
             <li><a href="#futuro">Futuro</a></li>
             <li><a href="#referencias">Referências</a></li>
+            <li><a href="#curiosidades">Curiosidades</a></li>
         </ul>
     </nav>
     
@@ -873,6 +876,39 @@
         </div>
     </section>
     
+    <section id="curiosidades">
+        <div class="container">
+            <h2>Curiosidades</h2>
+            
+            <div class="content-block">
+                <h3>Como a tecnologia por trás do ChatGPT pode tornar a leitura da mente realidade</h3>
+                <ul>
+                    <li>Pesquisadores da Universidade do Texas, em Austin, <br>desenvolveram uma tecnologia inovadora que utiliza inteligência artificial (IA) para traduzir a atividade cerebral em palavras, <br> sem a necessidade de implantes invasivos. Essa abordagem é baseada em modelos de linguagem, <br>como o GPT-1, que alimentam sistemas como o ChatGPT.</li>
+                    
+                </ul>
+                
+                <h3>Como Funciona</h3>
+                <ul>
+                    <li>Durante exames de ressonância magnética funcional (fMRI), os participantes ouviam ou imaginavam histórias. <br> A IA analisava os padrões de atividade cerebral e os convertia em texto. <br>Em alguns casos, a tradução foi tão precisa que capturou a essência do pensamento, não apenas palavras específicas. <br> Por exemplo, ao imaginar uma mensagem de retorno de um ente querido, a IA gerou um texto que refletia o sentimento da situação.
+                        </li>
+                    
+                </ul>
+                
+                <h3>Aplicações Potenciais</h3>
+                <ul>
+                    <li>Essa tecnologia tem um grande potencial para auxiliar pessoas com dificuldades de comunicação, <br>como aquelas que sofreram derrames ou têm afasia. Ao permitir a tradução de pensamentos em palavras, <br>pode melhorar significativamente a qualidade de vida desses indivíduos.</li>
+                    
+                </ul>
+                
+                <h3>Considerações Éticas</h3>
+                <ul>
+                    <li>Apesar das promessas, especialistas alertam para os riscos de privacidade e uso indevido dessa tecnologia. É essencial estabelecer regulamentações claras para proteger os direitos dos indivíduos e evitar abusos.</li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+    
     <section id="referencias">
         <div class="container">
             <h2>Referências Acadêmicas</h2>
@@ -892,7 +928,7 @@
                     <li>Fortune Business Insights. (2022). Artificial Intelligence Market Size Report.</li>
                 </ul>
                 
-                <h3>Casos Brasileiros</h3>
+                  <h3>Casos Brasileiros</h3>
                 <ul>
                     <li>Ministério da Ciência, Tecnologia e Inovações. (2021). Estratégia Brasileira de Inteligência Artificial.</li>
                     <li>FGV. (2023). Impacto da Inteligência Artificial no Mercado de Trabalho Brasileiro.</li>
@@ -1200,7 +1236,7 @@
             formData.append('file', fileInput.files[0]);
             
             try {
-                // API gratuita (limite de 25 chamadas/dia)
+                // API gratuita (limite de 25 chamadas por dia)
                 const response = await fetch('https://api.ocr.space/parse/image', {
                     method: 'POST',
                     headers: { 'apikey': 'K89947295688957' }, // Chave pública para testes
@@ -1247,43 +1283,7 @@
         });
 
         // Dark mode toggle
-        const darkModeToggle = document.createElement('button');
-        darkModeToggle.textContent = '🌙 Modo Escuro';
-        darkModeToggle.style.position = 'fixed';
-        darkModeToggle.style.bottom = '20px';
-        darkModeToggle.style.right = '20px';
-        darkModeToggle.style.padding = '10px';
-        darkModeToggle.style.borderRadius = '5px';
-        darkModeToggle.style.border = 'none';
-        darkModeToggle.style.backgroundColor = '#2c3e50';
-        darkModeToggle.style.color = 'white';
-        darkModeToggle.style.cursor = 'pointer';
-        darkModeToggle.style.zIndex = '1000';
-        darkModeToggle.style.boxShadow = '0 2px 5px rgba(0,0,0,0.2)';
-
-        darkModeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            
-            if (document.body.classList.contains('dark-mode')) {
-                darkModeToggle.textContent = '☀️ Modo Claro';
-                document.documentElement.style.setProperty('--primary-color', '#1a1a2e');
-                document.documentElement.style.setProperty('--secondary-color', '#4cc9f0');
-                document.documentElement.style.setProperty('--text-color', '#f8f9fa');
-                document.documentElement.style.setProperty('--light-bg', '#121212');
-                document.documentElement.style.setProperty('--dark-bg', '#0d0d0d');
-                document.documentElement.style.setProperty('--white', '#1e1e1e');
-            } else {
-                darkModeToggle.textContent = '🌙 Modo Escuro';
-                document.documentElement.style.setProperty('--primary-color', '#2c3e50');
-                document.documentElement.style.setProperty('--secondary-color', '#3498db');
-                document.documentElement.style.setProperty('--text-color', '#333');
-                document.documentElement.style.setProperty('--light-bg', '#f9f9f9');
-                document.documentElement.style.setProperty('--dark-bg', '#2c3e50');
-                document.documentElement.style.setProperty('--white', '#ffffff');
-            }
-        });
-
-        document.body.appendChild(darkModeToggle);
+        
 
         // Efeito de digitação no título
         const heroTitle = document.querySelector('header h1');
